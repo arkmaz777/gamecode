@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}PLAY{% endblock %}
+
+{% block content %}
+    <a href="{% url 'home' %}">Home</a>
+    <h1>Slot Game</h1>
+
+    <h2>
+        SCORES:
+        <ul>
+        <li>J -> 1</li>
+        <li>Q -> 2</li>
+        <li>K -> 3</li>
+        <li>A -> 4</li>
+        </ul>
+    </h2>
+
+    <h1>
+        {% if reels_combination %}
+            <p>{{ reels_combination }}</p>
+        {% endif %}
+
+        {% if game_result %}
+            <p>{{ game_result }}</p>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit">Play</button>
+        </form>
+    </h1>
+
+    <h3>Your last 10 results:</h3>
+        <ul>
+        {% for result in current_user_last_10_results %}
+            <li>
+                {{ result.reels_combination }}, Score: {{ result.game_result }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h3>Last 10 results:</h3>
+        <ul>
+        {% for result in last_10_results %}
+            <li>
+                {{ result.reels_combination }}, Score: {{ result.game_result }}, Nick: {{  result.id_auth_user.username }}
+            </li>
+        {% endfor %}
+    </ul>
+
+
+
+
+{% endblock %}
+
