@@ -234,3 +234,39 @@ a {
     position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
 }
+
+.history_results {
+    font-size: 12px;
+}
+
+ul {
+    list-style-type: none; /* Usuwa punkty przed elementami listy */
+    padding: 0; /* Usuwa domyślne wcięcie */
+    margin: 0; /* Usuwa domyślne marginesy */
+    max-width: 500px; /* Ogranicza szerokość listy, aby była bardziej estetyczna */
+    margin: 0 auto; /* Wyśrodkowanie listy na stronie */
+}
+
+li {
+    font-size: 16px; /* Rozmiar czcionki elementów listy */
+    line-height: 1.4; /* Mały odstęp pomiędzy wierszami */
+    padding: 8px 0; /* Wewnętrzny margines między elementami listy */
+    border-bottom: 1px solid #ddd; /* Delikatna linia oddzielająca elementy */
+    transition: background-color 0.3s, padding-left 0.3s; /* Animacje dla tła i przesunięcia */
+}
+
+li:hover {
+    background-color: #f7f7f7; /* Kolor tła po najechaniu */
+    padding-left: 10px; /* Przesunięcie elementu listy w lewo */
+}
+
+/* Opcjonalnie dla linków w <li> */
+li a {
+    color: #2e6da4; /* Kolor linku */
+    text-decoration: none; /* Brak podkreślenia */
+    transition: color 0.3s ease; /* Animacja zmiany koloru linku */
+}
+
+li a:hover {
+    color: #4CAF50; /* Kolor linku po najechaniu */
+}

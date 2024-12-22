@@ -5,21 +5,20 @@
 {% block content %}
     <a href="{% url 'home' %}">&laquo; Home Page</a>
 
-        {% if game_result %}
-            <div class="result">{{ game_result }}</div>
-        {% endif %}
 
-
-        {% if reels_combination %}
             <div class="result">
                 {{ reels_combination }}
+                {% if reels_combination %}
+                <h5>points: {{ game_result }}</h5>
+                {% endif %}
                 <form method="POST">
-                {% csrf_token %}
-                <button type="submit">Play</button>
-        </form>
+                    {% csrf_token %}
+                    <button type="submit">Play</button>
+                </form>
             </div>
-        {% endif %}
 
+
+{% if reels_combination %}
     <div class="history_results">
     <h3>Your last 10 results:</h3>
         <ul>
@@ -39,7 +38,7 @@
         {% endfor %}
     </ul>
     </div>
-
+{% endif %}
 
 
 
