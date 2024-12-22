@@ -3,34 +3,24 @@
 {% block title %}PLAY{% endblock %}
 
 {% block content %}
-    <a href="{% url 'home' %}">Home</a>
-    <h1>Slot Game</h1>
-
-    <h2>
-        SCORES:
-        <ul>
-        <li>J -> 1</li>
-        <li>Q -> 2</li>
-        <li>K -> 3</li>
-        <li>A -> 4</li>
-        </ul>
-    </h2>
-
-    <h1>
-        {% if reels_combination %}
-            <p>{{ reels_combination }}</p>
-        {% endif %}
+    <a href="{% url 'home' %}">&laquo; Home Page</a>
 
         {% if game_result %}
-            <p>{{ game_result }}</p>
+            <div class="result">{{ game_result }}</div>
         {% endif %}
 
-        <form method="POST">
-            {% csrf_token %}
-            <button type="submit">Play</button>
-        </form>
-    </h1>
 
+        {% if reels_combination %}
+            <div class="result">
+                {{ reels_combination }}
+                <form method="POST">
+                {% csrf_token %}
+                <button type="submit">Play</button>
+        </form>
+            </div>
+        {% endif %}
+
+    <div class="history_results">
     <h3>Your last 10 results:</h3>
         <ul>
         {% for result in current_user_last_10_results %}
@@ -48,6 +38,7 @@
             </li>
         {% endfor %}
     </ul>
+    </div>
 
 
 

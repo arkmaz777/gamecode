@@ -2,16 +2,113 @@
 <html>
 <head>
     <title>{% block title %}GameCode{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
-<body>
-    <header>
-        <h1>Welcome to the slot game!</h1>
-    </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-    <footer>
-        <p>&copy; 22.12.2024 arkadiusz.mazur@hotmail.com</p>
-    </footer>
-</body>
-</html>
+
+
+
+<body id="css-zen-garden">
+<div class="page-wrapper">
+
+	<section class="intro" id="zen-intro">
+		<header role="banner">
+			<h1>Lets try the slot game!</h1>
+		</header>
+
+
+		<div class="preamble" id="zen-preamble" role="article">
+            <p>
+			{% block content %}{% endblock %}
+			</p>
+
+		</div>
+	</section>
+
+	<div class="main supporting" id="zen-supporting" role="main">
+		<div class="explanation" id="zen-explanation" role="article">
+			<h3>How the result is calculated?</h3>
+                <h4>
+                    SCORES:
+                    <ul>
+                    <li>J -> 1</li>
+                    <li>Q -> 2</li>
+                    <li>K -> 3</li>
+                    <li>A -> 4</li>
+                    </ul>
+                </h4>
+		</div>
+
+		<div class="participation" id="zen-participation" role="article">
+			<h3>Participations</h3>
+                        <p>since November 2021 till now I try my my best as Machine Learning Engineer</p>
+                        <p>2020, 2021 - I was working for Payability company and was responsible for payments related project</p>
+			<p>2017 - 2020 - I was <b>Ruby (Rails and Cucumber)</b> programmer in Shiji company (app for <a href="http://www.shijigroup.com/" target="_blank">hotels)</a></p>
+			<p>2016 - 2017 - I realized <a href="https://uk.vin-info.com/" target="_blank">app for automotive industry</a>
+			by using <b>PHP</b> and <b>Python</b></p>
+			<p>2015 - I participated as a regular <b>PHP/Zend</b> and also <b>Python/Pandas/NumPy</b> Developer in <a href="https://www.pkpcargo.com/en/" target="_blank">PKP Cargo logistic company</a>
+			and also made a few private projects in <b>Ruby</b> on B2B contractsz</p>
+			<p>2011 - 2014 - as a <b>senior PHP developer</b> I realized business intelligence system for
+			<a href="https://drmax.pl/" target="_blank">Dr Max pharmacy sales network</a>. During this time I realized a few smaller projects on B2B contracts
+			in <b>Ruby on Rails</b> framework as well</p>
+			<p>2008 - 2011 In this time I started in this business and made a lot of websites and e-commerce online shops
+		</div>
+
+		<div class="requirements" id="zen-requirements" role="article">
+			<h3>My another complementary tools</h3>
+			<p>MySQL, Postgres, JS, jQuery, MongoDB, Redis, Elasticsearch,
+                        Docker, Git, AWS, Python (with Machine Learning libraries)</p>
+
+		</div>
+
+		<footer>
+			<span style="color: purple">
+                            <p>
+                            <a href="CV_Ruby _Developer_Arkadiusz_Mazur.pdf" target="_blank">
+                            <img src="img/download.png" width="30" height="30" />
+                            Download my CV
+                            </a>
+                            <a href="Letter_of_Intent_Arkadiusz_Mazur.pdf" target="_blank">
+                                <img src="img/download.png" width="30" height="30" />
+                                Download <strong>Letter of Intent</strong>
+                            </a>
+                            </p>
+
+
+                        </span>
+		</footer>
+
+	</div>
+
+
+	<aside class="sidebar" role="complementary">
+		<div class="wrapper">
+
+			<div class="design-selection" id="design-selection">
+				<h3 class="select">Contact me:</h3>
+				<nav role="navigation">
+					<ul>
+					<li>
+						<b>Arkadiusz Mazur</b> - <b>Python Developer</b>, Poland (Katowice)
+					</li>
+					<li>
+						Phone: <b>+48 507-161-496</b>
+					</li>
+					<li>
+						email: <b>arkadiusz.mazur@hotmail.com</b>
+					</li>
+					</ul>
+				</nav>
+			</div>
+
+		</div>
+	</aside>
+
+
+</div>
+
+<div class="extra1" role="presentation"></div><div class="extra2" role="presentation"></div><div class="extra3" role="presentation"></div>
+<div class="extra4" role="presentation"></div><div class="extra5" role="presentation"></div><div class="extra6" role="presentation"></div>
+
+
+</body></html>
